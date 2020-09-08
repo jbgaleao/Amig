@@ -1,0 +1,28 @@
+﻿@model Amigurumis.Models.Fabricante
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+    <h2>Detalhes</h2>
+
+<div>
+    <h4>Fabricante</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Nome:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+    </dl>
+</div>
+<br />
+<br />
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id })  |
+    @Html.ActionLink("Retornar para Listagem", "Index")
+</p>

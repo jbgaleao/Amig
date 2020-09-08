@@ -1,0 +1,50 @@
+﻿@model Amigurumis.Models.Revista
+
+@{
+    ViewBag.Title = "Excluir";
+}
+
+    <h2>Excluir</h2>
+
+    <h3>Confirma a Exclusão do registro ?</h3>
+    <div>
+        <br /><br />
+        <h4>Revista</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.Label("Título / Tema:")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TituloTema)
+            </dd>
+
+            <dt>
+                @Html.Label("Número Edição:")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NumeroEdicao)
+            </dd>
+
+            <dt>
+                @Html.Label("Foto da Capa:")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FotoCapa)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Excluir" class="btn btn-danger" /><br /><br /><br />
+                @Html.ActionLink("Retornar para a Listagem", "Index")
+            </div>
+        }
+    </div>

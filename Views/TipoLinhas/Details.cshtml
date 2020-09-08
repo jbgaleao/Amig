@@ -1,0 +1,28 @@
+﻿@model Amigurumis.Models.TipoLinha
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+<br />
+<div>
+    <h4>Tipo de Linha</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Descrição:")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+</div>
+<br />
+<br />
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id })  | 
+    @Html.ActionLink("Retornar para Listagem", "Index")
+</p>
