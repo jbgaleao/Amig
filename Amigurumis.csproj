@@ -153,6 +153,10 @@
     <Compile Include="Migrations\202009090142578_Adicao_Novas_Tabelas.designer.cs">
       <DependentUpon>202009090142578_Adicao_Novas_Tabelas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009090350184_Altera_Campo_Foro_para_string.cs" />
+    <Compile Include="Migrations\202009090350184_Altera_Campo_Foro_para_string.designer.cs">
+      <DependentUpon>202009090350184_Altera_Campo_Foro_para_string.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AmigurumisContext.cs" />
     <Compile Include="Models\Fabricante.cs" />
@@ -344,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009090142578_Adicao_Novas_Tabelas.resx">
       <DependentUpon>202009090142578_Adicao_Novas_Tabelas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009090350184_Altera_Campo_Foro_para_string.resx">
+      <DependentUpon>202009090350184_Altera_Campo_Foro_para_string.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -21,7 +21,7 @@ namespace Amigurumis.Models
         [Required]
         public int NumeroEdicao { get; set; }
         [Required]
-        public byte[] FotoCapa { get; set; }
+        public string FotoCapa { get; set; }
 
         public virtual ICollection<Receita> VReceita { get; set; }
     }
