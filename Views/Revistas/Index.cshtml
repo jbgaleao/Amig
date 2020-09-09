@@ -13,7 +13,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.Label("Título / Tema")
+            @Html.Label("Tema")
         </th>
         <th>
             @Html.Label("Número da Edição")
@@ -27,7 +27,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.TituloTema)
+            @Html.DisplayFor(modelItem => item.Tema)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.NumeroEdicao)

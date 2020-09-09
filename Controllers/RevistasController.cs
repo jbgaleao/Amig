@@ -42,7 +42,7 @@ namespace Amigurumis.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,TituloTema,NumeroEdicao,FotoCapa")] Revista revista)
+        public ActionResult Create([Bind(Include = "Id,Tema,NumeroEdicao,FotoCapa")] Revista revista)
         {
             if (ModelState.IsValid)
             {
@@ -74,7 +74,7 @@ namespace Amigurumis.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,TituloTema,NumeroEdicao,FotoCapa")] Revista revista)
+        public ActionResult Edit([Bind(Include = "Id,Tema,NumeroEdicao,FotoCapa")] Revista revista)
         {
             if (ModelState.IsValid)
             {
