@@ -19,7 +19,7 @@ namespace Amigurumis.Controllers
         }
 
         // desserializando a imagem 
-        public FileContentResult getImagem (int id)
+        public FileContentResult getImagem(int id)
         {
             byte[] byteArray = db.REVISTAS.Find(id).FotoCapa;
             return byteArray != null
@@ -58,16 +58,20 @@ namespace Amigurumis.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (file.FileName != null)
-                {
-                    MemoryStream target = new MemoryStream();
-                    file.InputStream.CopyTo(target);
-                    byte[] data = target.ToArray();
-                    revista.FotoCapa = data;
-                }
-                db.REVISTAS.Add(revista);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+               
+                    if (file.FileName != null)
+                    {
+                        MemoryStream target = new MemoryStream();
+                        file.InputStream.CopyTo(target);
+                        byte[] data = target.ToArray();
+                        revista.FotoCapa = data;
+                    }
+                    db.REVISTAS.Add(revista);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                
+               
+
             }
 
             return View(revista);

@@ -1,0 +1,3 @@
+﻿function msgErro() {
+    $().alert('Erro');
+}
