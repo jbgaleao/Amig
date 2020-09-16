@@ -7,7 +7,7 @@
 <h2>Editar Revista</h2>
 
 
-@using (Html.BeginForm("Create", "Revistas", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Edit", "Revistas", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
@@ -39,9 +39,9 @@
                 @*@Html.EditorFor(model => model.FotoCapa, new { htmlAttributes = new { @class = "form-control" } })*@
                 <img src="@Url.Action("getImagem", "Revistas", new { id = Model.Id })" alt="Foto de Capa da Revista" />
                 <br />
-                <div class="col-md-10">
-                    <div >
-                        <input type="file" class="custom-file-input" id="file"  name="file">
+                <div class="col-md-10" style="border: thin; padding-top: 10px;">
+                    <div>
+                        <input type="file" class="custom-file-input" id="file" name="file">
                     </div>
                 </div>
             </div>

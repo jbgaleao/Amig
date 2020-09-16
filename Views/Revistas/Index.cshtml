@@ -33,8 +33,11 @@
             @Html.DisplayFor(modelItem => item.NumeroEdicao)
         </td>
         <td>
-            <img src="@Url.Action("getImagem", "Revistas", new { id = item.Id })" alt="Foto de Capa da Revista" style="width: 120px; height: 160px" />
-            @*@Html.DisplayFor(modelItem => item.FotoCapa)*@
+            <div class="col-md-10" style="border: thin; padding-top: 10px;">
+                <div>
+                    <img src="@Url.Action("getImagem", "Revistas", new { id = item.Id })" alt="Foto de Capa da Revista" style="width: 120px; height: 160px" />
+                </div>
+            </div>
         </td>
         <td>
             @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |

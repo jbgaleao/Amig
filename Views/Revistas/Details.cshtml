@@ -4,7 +4,7 @@
     ViewBag.Title = "Detalhes";
 }
 
-    <h2>Detalhes</h2>
+<h2>Detalhes</h2>
 
 <div>
     <h4>Revista</h4>
@@ -31,8 +31,11 @@
         </dt>
 
         <dd>
-            <img src="@Url.Action("getImagem", "Revistas", new { id = Model.Id })" alt="Foto de Capa da Revista" />
-            @*@Html.DisplayFor(model => model.FotoCapa)*@
+            <div class="col-md-10" style="border: thin; padding-top: 10px;">
+                <div>
+                    <img src="@Url.Action("getImagem", "Revistas", new { id = Model.Id })" alt="Foto de Capa da Revista" />
+                </div>
+            </div>
         </dd>
 
     </dl>

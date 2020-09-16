@@ -93,10 +93,17 @@ namespace Amigurumis.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Tema,NumeroEdicao,FotoCapa")] Revista revista)
+        public ActionResult Edit([Bind(Include = "Id,Tema,NumeroEdicao,FotoCapa")] Revista revista, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
+                if (file.FileName != null)
+                {
+                    MemoryStream target = new MemoryStream();
+                    file.InputStream.CopyTo(target);
+                    byte[] data = target.ToArray();
+                    revista.FotoCapa = data;
+                }
                 db.Entry(revista).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

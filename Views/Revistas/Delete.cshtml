@@ -4,47 +4,51 @@
     ViewBag.Title = "Excluir";
 }
 
-    <h2>Excluir</h2>
+<h2>Excluir</h2>
 
-    <h3>Confirma a Exclusão do registro ?</h3>
-    <div>
-        <br /><br />
-        <h4>Revista</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.Label("Tema:")
-            </dt>
+<h3>Confirma a Exclusão do registro ?</h3>
+<div>
+    <br /><br />
+    <h4>Revista</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Tema:")
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Tema)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Tema)
+        </dd>
 
-            <dt>
-                @Html.Label("Número Edição:")
-            </dt>
+        <dt>
+            @Html.Label("Número Edição:")
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.NumeroEdicao)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.NumeroEdicao)
+        </dd>
 
-            <dt>
-                @Html.Label("Foto da Capa:")
-            </dt>
+        <dt>
+            @Html.Label("Foto da Capa:")
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.FotoCapa)
-            </dd>
-
-        </dl>
-
-        @using (Html.BeginForm())
-        {
-            @Html.AntiForgeryToken()
-
-            <div class="form-actions no-color">
-                <input type="submit" value="Excluir" class="btn btn-danger" /><br /><br /><br />
-                @Html.ActionLink("Retornar para a Listagem", "Index")
+        <dd>
+            <div class="col-md-10" style="border: thin; padding-top: 10px;">
+                <div>
+                    <img src="@Url.Action("getImagem", "Revistas", new { id = Model.Id })" alt="Foto de Capa da Revista" />
+                </div>
             </div>
-        }
-    </div>
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Excluir" class="btn btn-danger" /><br /><br /><br />
+            @Html.ActionLink("Retornar para a Listagem", "Index")
+        </div>
+    }
+</div>
