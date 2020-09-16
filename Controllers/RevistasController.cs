@@ -18,6 +18,16 @@ namespace Amigurumis.Controllers
             return View(db.REVISTAS.ToList());
         }
 
+        // desserializando a imagem 
+        public FileContentResult getImagem (int id)
+        {
+            byte[] byteArray = db.REVISTAS.Find(id).FotoCapa;
+            return byteArray != null
+                ? new FileContentResult(byteArray, "image/jpeg")
+                : null;
+        }
+
+
         // GET: Revistas/Details/5
         public ActionResult Details(int? id)
         {
@@ -44,10 +54,17 @@ namespace Amigurumis.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Tema,NumeroEdicao,FotoCapa")] Revista revista)
+        public ActionResult Create([Bind(Include = "Id,Tema,NumeroEdicao,FotoCapa")] Revista revista, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
+                if (file.FileName != null)
+                {
+                    MemoryStream target = new MemoryStream();
+                    file.InputStream.CopyTo(target);
+                    byte[] data = target.ToArray();
+                    revista.FotoCapa = data;
+                }
                 db.REVISTAS.Add(revista);
                 db.SaveChanges();
                 return RedirectToAction("Index");

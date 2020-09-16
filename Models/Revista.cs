@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System;
 
 namespace Amigurumis.Models
 {
@@ -20,8 +21,8 @@ namespace Amigurumis.Models
         public string Tema { get; set; }
         [Required]
         public int NumeroEdicao { get; set; }
-        [Required]
-        public string FotoCapa { get; set; }
+     
+        public byte[] FotoCapa { get; set; }
 
         public virtual ICollection<Receita> VReceita { get; set; }
     }

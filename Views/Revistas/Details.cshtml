@@ -31,7 +31,8 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.FotoCapa)
+            <img src="@Url.Action("getImagem", "Revistas", new { id = Model.Id })" alt="Foto de Capa da Revista" />
+            @*@Html.DisplayFor(model => model.FotoCapa)*@
         </dd>
 
     </dl>

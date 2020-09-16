@@ -25,7 +25,7 @@ namespace Amigurumis.Models
         public string Descricao { get; set; }
 
         [Required]
-        public string foto { get; set; }
+        public byte[] foto { get; set; }
 
         [Required]
         public int IdRevista { get; set; }

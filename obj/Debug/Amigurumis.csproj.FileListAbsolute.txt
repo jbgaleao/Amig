@@ -197,3 +197,4 @@ D:\Estudos\Amig\obj\Debug\Amigurumis.Migrations.Alteracao_Classes.resources
 D:\Estudos\Amig\obj\Debug\Amigurumis.Migrations.Adicao_Tabela_Pedido.resources
 D:\Estudos\Amig\obj\Debug\Amigurumis.Migrations.Adicao_Novas_Tabelas.resources
 D:\Estudos\Amig\obj\Debug\Amigurumis.Migrations.Altera_Campo_Foro_para_string.resources
+D:\Estudos\Amig\obj\Debug\Amigurumis.Migrations.muda_campoimagem_para_byte.resources

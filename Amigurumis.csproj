@@ -157,6 +157,10 @@
     <Compile Include="Migrations\202009090350184_Altera_Campo_Foro_para_string.designer.cs">
       <DependentUpon>202009090350184_Altera_Campo_Foro_para_string.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009160238291_muda_campo-imagem_para_byte.cs" />
+    <Compile Include="Migrations\202009160238291_muda_campo-imagem_para_byte.designer.cs">
+      <DependentUpon>202009160238291_muda_campo-imagem_para_byte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AmigurumisContext.cs" />
     <Compile Include="Models\Fabricante.cs" />
@@ -351,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009090350184_Altera_Campo_Foro_para_string.resx">
       <DependentUpon>202009090350184_Altera_Campo_Foro_para_string.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009160238291_muda_campo-imagem_para_byte.resx">
+      <DependentUpon>202009160238291_muda_campo-imagem_para_byte.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
