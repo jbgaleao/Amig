@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Amigurumis.Models
 {
-        [Table("Fabricante")]
+    [Table("Fabricante")]
     public class Fabricante
     {
         [Key]
